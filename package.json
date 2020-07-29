@@ -1,0 +1,44 @@
+{
+  "name": "webcull-slack",
+  "version": "1.0.1",
+  "description": "Slack App for WebCull",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Bookmarks",
+    "browser"
+  ],
+  "author": "Chibuzor Enukoha",
+  "license": "ISC",
+  "devDependencies": {
+    "cross-env": "^7.0.2",
+    "eslint": "^7.4.0",
+    "eslint-config-prettier": "^6.11.0",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.11",
+    "prettier": "2.0.5"
+  },
+  "dependencies": {
+    "@slack/bolt": "^2.1.1",
+    "axios": "^0.19.2",
+    "body-parser": "^1.19.0",
+    "dotenv-flow": "^3.2.0",
+    "ejs": "^3.1.3",
+    "lodash": "^4.17.19",
+    "qs": "^6.9.4",
+    "string-tokenizer": "0.0.8",
+    "url-regex": "^4.1.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": "eslint --cache --fix",
+    "*.{js,css,md}": "prettier --write"
+  }
+}
